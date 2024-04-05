@@ -101,4 +101,10 @@ class EventsTable extends DataTableComponent
 
         return $query->whereIn('aggregate_uuid', $uuids);
     }
+
+    public function configure(): void
+    {
+        // TODO: Implement configure() method.
+    }
+
 }
