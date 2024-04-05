@@ -6,6 +6,12 @@ use Spatie\EventSourcing\StoredEvents\Models\EloquentStoredEvent;
 
 trait EventModalTrait
 {
+    public function configure(): void
+    {
+        // set the primary key
+        $this->setPrimaryKey('id');
+    }
+
     // To show/hide the modal
     public bool $viewingModal = false;
 
