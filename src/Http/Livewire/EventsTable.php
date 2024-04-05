@@ -8,6 +8,8 @@ use Ramsey\Uuid\Uuid;
 use Rappasoft\LaravelLivewireTables\DataTableComponent;
 use Rappasoft\LaravelLivewireTables\Views\Column;
 use Rappasoft\LaravelLivewireTables\Views\Filter;
+use Rappasoft\LaravelLivewireTables\Views\Filters\DateFilter;
+use Rappasoft\LaravelLivewireTables\Views\Filters\SelectFilter;
 
 class EventsTable extends DataTableComponent
 {
@@ -53,12 +55,12 @@ class EventsTable extends DataTableComponent
             });
 
         return [
-            'event_class' => Filter::make('Event Class')
-                ->select($eventClasses->prepend('Any', '')->toArray()),
-            'created_from' => Filter::make('Created From')
-                ->date(),
-            'created_to' => Filter::make('Created To')
-                ->date(),
+            'event_class' => SelectFilter::make('Event Class')
+                ->options([
+                    'Any' => 'Any',
+                ]),
+            'created_from' => DateFilter::make('Created From'),
+            'created_to' => DateFilter::make('Created To'),
             // 'tags' => Filter::make('Tags')
             //     ->multiSelect([
             //         'tag1' => 'Tags 1',

@@ -12,7 +12,7 @@ trait EventModalTrait
     // The information currently being displayed in the modal
     public ?EloquentStoredEvent $currentModal = null;
 
-    public function getTableRowUrl(): ?string
+    public function getTableRowUrl($row): ?string
     {
         return '';
     }
