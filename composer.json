@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": "^8.0",
-        "blade-ui-kit/blade-heroicons": "^1.2",
+        "blade-ui-kit/blade-heroicons": "^1.2|^2.0",
         "blade-ui-kit/blade-icons": "^1.1",
         "blade-ui-kit/blade-ui-kit": "^0.3.2",
         "illuminate/contracts": "^8.37|^9.0",
@@ -71,6 +71,6 @@
             }
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "beta",
     "prefer-stable": true
 }
