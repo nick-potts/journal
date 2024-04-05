@@ -19,7 +19,7 @@ class EventsPastSevenDaysCard extends Component
             ->count();
 
         return view('journal::livewire.card', [
-            'icon' => 'heroicon-o-archive',
+            'icon' => 'heroicon-o-archive-box-x-mark',
             'label' => 'Events Past 7 Days',
             'value' => $value,
         ]);
