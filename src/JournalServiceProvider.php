@@ -38,5 +38,9 @@ class JournalServiceProvider extends PackageServiceProvider
         Livewire::component('journal::number-of-events-card', NumberOfEventsCard::class);
         Livewire::component('journal::events-past-hour-card', EventsPastHourCard::class);
         Livewire::component('journal::events-past-seven-days-card', EventsPastSevenDaysCard::class);
+
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'journal');
+
+
     }
 }
